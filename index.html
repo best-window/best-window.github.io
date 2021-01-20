@@ -1,1 +1,172 @@
-hello world //bestwindow
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Best Window</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+	<style id="critical_css">
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+		.header,
+		.header_branding,
+		.main,
+		.section--main .section_header{
+			display: flex;
+		}
+		.section--main .section_header{
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		.section{
+			display: grid;
+		}
+		.header{
+			height: 40px;
+			position: relative;
+		}
+		.header_menu .menu_list{
+			transform: translate3d(100%, 0, 0);
+		}
+		.main{
+			flex-direction: column;
+			overflow-y: auto;
+			height: 100vh;
+			height: calc(100vh - 60px);
+			scroll-behavior: smooth;
+		}
+		h1, h2, h3{
+			margin-top: 0;
+		}
+	</style>
+
+	<link rel="stylesheet" href="./src/assets/style.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<a href="/" title="Best Window" class="header_branding">
+			<img src="./src/static/logo.jpg" alt="Best Window" class="branding_logo">
+		</a>
+
+		<nav class="header_menu menu">
+			<button class="menu_toggler hamburger hamburger--arrow-r" type="button" id="menu_toggler">
+				<span class="hamburger-box"><span class="hamburger-inner"></span></span>
+
+				menu
+			</button>
+
+			<ul class="menu_list" id="main_menu">
+				<li>
+					<a href="#main">Start</a>
+				</li>
+
+				<li>
+					<a href="#o_firmie">O firmie</a>
+				</li>
+
+				<li>
+					<a href="#oferta">Oferta</a>
+				</li>
+
+				<li>
+					<a href="#realizacje">Realizacje</a>
+				</li>
+
+				<li>
+					<a href="#kontakt">Kontakt</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="main">
+		<section class="section section--main" id="main">
+			<div class="section_header">
+				<h2>Lorem Ipsum is simply dummy text</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+		</section>
+
+		<section class="section section--o_firmie" id="o_firmie">
+			<div class="section_header">
+				<h2>O firmie</h2>
+				<div>
+					<p> <span>123</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<p> <span>123</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<p> <span>123</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				</div>
+			</div>
+
+			<article class="section_content">
+				<h3>Lorem Ipsum is simply dummy text</h3>
+				<p>
+					Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+					when an unknown printer took a galley of type <strong>and scrambled</strong> it to make a type specimen book.
+					It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+					<strong>It was popularised in the 1960s</strong> with the release of Letraset sheets containing Lorem Ipsum passages,
+					and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+				</p>
+			</article>
+
+			<aside class="section_aside">
+
+			</aside>
+		</section>
+
+		<section class="section section--oferta" id="oferta">
+			<div class="section_header">
+				<h2>Oferta</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+
+			<article class="section_content">
+
+			</article>
+
+			<aside class="section_aside">
+
+			</aside>
+		</section>
+
+		<section class="section section--realizacje" id="realizacje">
+			<div class="section_header">
+				<h2>Realizacje</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+
+			<article class="section_content">
+
+			</article>
+		</section>
+
+		<section class="section section--kontakt" id="kontakt">
+			<div class="section_header">
+				<h2>Kontakt</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+
+			<form class="section_content">
+
+			</form>
+
+			<aside class="section_aside">
+
+			</aside>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<script src="./src/assets/script.js"></script>
+	</footer>
+
+</body>
+
+</html>
