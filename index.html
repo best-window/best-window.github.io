@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Best Window</title>
+	<title>Bestwindow</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
 
@@ -12,6 +12,7 @@
 		img{
 			max-width: 100%;
 			height: auto;
+			
 		}
 		.header,
 		.header_branding,
@@ -39,9 +40,15 @@
 			height: 100vh;
 			height: calc(100vh - 60px);
 			scroll-behavior: smooth;
+			font-weight: 300;
 		}
 		h1, h2, h3{
 			margin-top: 0;
+			line-height: 1.2em;
+		}
+		a{
+			text-decoration: none;
+			color: inherit;
 		}
 	</style>
 
@@ -51,8 +58,8 @@
 <body>
 
 	<header class="header">
-		<a href="/" title="Best Window" class="header_branding">
-			<img src="./src/static/logo.jpg" alt="Best Window" class="branding_logo">
+		<a href="/" title="Bestwindow" class="header_branding">
+			<img src="./src/static/logo.jpg" alt="Bestwindow" class="branding_logo">
 		</a>
 
 		<nav class="header_menu menu">
@@ -82,7 +89,17 @@
 				<li>
 					<a href="#kontakt">Kontakt</a>
 				</li>
+
+				<li class="contact-links">
+					Zadzwoń:
+					<a href="tel:123456789">+48 123 456 789</a>
+					
+					Wyślij e-mail:
+					<a href="mailto:kontakt.bestwindow@gmail.com">kontakt.bestwindow@gmail.com</a>
+				</li>
 			</ul>
+
+			
 		</nav>
 	</header>
 
@@ -90,17 +107,26 @@
 		<section class="section section--main" id="main">
 			<div class="section_header">
 				<h2>Lorem Ipsum is simply dummy text</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<p>Lorem Ipsum is simply dummy text.</p>
 			</div>
 		</section>
 
 		<section class="section section--o_firmie" id="o_firmie">
 			<div class="section_header">
 				<h2>O firmie</h2>
-				<div>
-					<p> <span>123</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p> <span>123</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p> <span>123</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+				<div class="couters">
+					<p class="couters_item">
+						<span class="count">123</span> Lorem Ipsum is simply dummy text.
+					</p>
+
+					<p class="couters_item">
+						<span class="count">45</span> Lorem Ipsum is simply dummy text of the printing and typesetting.
+					</p>
+
+					<p class="couters_item">
+						<span class="count">678</span> Lorem Ipsum is simply dummy text of the printing.
+					</p>
 				</div>
 			</div>
 
@@ -140,6 +166,26 @@
 			<div class="section_header">
 				<h2>Realizacje</h2>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<div class="realizacje_categories">
+					<h3>
+						Kategorie <br>
+						<button>Wszystkie</button>
+						<ol>
+							<li>
+								Kategoria
+							</li>
+							<li>
+								Kategoria
+							</li>
+							<li>
+								Kategoria
+							</li>
+							<li>
+								Kategoria
+							</li>
+						</ol>
+					</h3>
+				</div>
 			</div>
 
 			<article class="section_content">
@@ -150,11 +196,43 @@
 		<section class="section section--kontakt" id="kontakt">
 			<div class="section_header">
 				<h2>Kontakt</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<p>Kliknij w numer lub adres e-mail,<br> by się skontaktować.</p>
+				<address>
+					<strong>Bestwindow</strong><br>
+					ul. Lorem 12 / 3<br>
+					12-345 Ipsum
+					
+					<div class="contact-links">
+						Zadzwoń:
+						<a href="tel:123456789">+48 123 456 789</a>
+						
+						Wyślij e-mail:
+						<a href="mailto:kontakt.bestwindow@gmail.com">kontakt.bestwindow@gmail.com</a>
+					</div>
+
+					pon. - pt. 8.00 - 16.00
+				</address>
+				<footer>
+					Realizacja <a href="https://grezisek.github.io">grezisek</a><br>
+					Copyright 2021 Bestwindow
+				</footer>
 			</div>
 
 			<form class="section_content">
-
+				<h3>Formularz kontaktowy</h3>
+				<label for="name">Imię i nazwisko</label>
+				<input type="text" name="name">
+				<br>
+				<label for="mail">Adres e-mail</label>
+				<input type="text" name="mail">
+				<br>
+				<label for="phone">Telefon (opcjonalnie)</label>
+				<input type="text" name="phone">
+				<br>
+				<label for="message">Wiadomość</label>
+				<textarea name="message"></textarea>
+				<br>
+				<input type="submit" value="Wyślij wiadomość" role="button">
 			</form>
 
 			<aside class="section_aside">

@@ -8,5 +8,15 @@
 		document.body.classList.toggle("menu-open");
 	}
 	
+	function setCSSSidebarWidthCorrection() {
+		const scrollableParent = document.querySelector(".main");
+		const scrollableChild = document.querySelector(".section");
+		const sidebarWidth = scrollableParent.getBoundingClientRect().width - scrollableChild.getBoundingClientRect().width;
+		document.documentElement.style.setProperty('--sidebar-width', sidebarWidth + "px");
+	}
+
+	setCSSSidebarWidthCorrection();
+
 	menuToggler.addEventListener("click", toggleMenu);
+	
 })();
