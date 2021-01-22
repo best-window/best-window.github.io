@@ -107,6 +107,15 @@ body, html {
 	position: relative;
 }
 
+.section_content{
+	display: flex;
+	flex-direction: column;
+}
+
+.section_content p{
+	font-size: 0.9rem;
+}
+
 .section:nth-of-type(2n) .section_header::after{
 	background-color: #fff;
 }
@@ -115,8 +124,17 @@ body, html {
 	background-color: #222;
 }
 
-.section--oferta:nth-of-type(2n + 1) .section_header::after{
+.section--oferta .section_header::after{
 	background-color: #9abb14;
+}
+
+.section--oferta .section_content{
+
+}
+
+.section--oferta .section_content p{
+	font-size: 15px;
+	margin-top: 8px;
 }
 
 .section--main h2{
@@ -127,11 +145,7 @@ body, html {
 	font-size: 16px;
 }
 
-.section_content{
-	display: flex;
-	flex-direction: column;
-}
-
+.section--realizacje .section_header,
 .section--kontakt .section_header{
 	display: flex;
 	flex-direction: column;
@@ -235,7 +249,6 @@ body, html {
 	min-height: 45px;
 	margin: 0;
 	padding: 8px 0;
-	
 }
 
 .couters_item + .couters_item{
@@ -248,6 +261,25 @@ body, html {
 	min-width: 80px;
 }
 
+.realizacje_categories{
+	margin: auto 0;
+}
+
+.realizacje_categories button{
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	color: #fff;
+	font-size: inherit;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+.categories_list{
+	font-size: 0.9rem;
+	padding-inline-start: 1em;
+}
 
 .section--o_firmie::before {
 	background-image: url("./images/matthias-heil-gQLJteyXghw-unsplash.jpg");
@@ -301,6 +333,11 @@ body, html {
 		margin-top: 45px;
 	}
 
+	.section--kontakt .section_content{
+		
+		max-width: 450px;
+	}
+
 	.section_content h3{
 		margin-top: 7px;
 	}
@@ -329,7 +366,6 @@ body, html {
 		padding: 18px 0;
 	}
 
-	
 }
 
 @media all and (min-width: 1300px) {
@@ -338,17 +374,17 @@ body, html {
 	}
 
 	.section{
-		grid-template-columns: 350px 1fr 290px;
-		grid-template-columns: 350px 1fr calc(290px - var(--sidebar-width));
+		grid-template-columns: 420px 1fr 340px;
+		grid-template-columns: 420px 1fr calc(340px - var(--sidebar-width));
 		grid-column-gap: 50px;
 	}
 
 	.section--realizacje{
-		grid-template-columns: 350px 1fr;
+		grid-template-columns: 420px 1fr;
 	}
 
 	.section_content h3{
-		margin-top: 9px;
+		margin-top: 6px;
 	}
 
 	.section--main p{
@@ -376,7 +412,7 @@ body, html {
 
 	.header,
 	.section{
-		padding-left: 60px;
+		padding-left: 100px;
 	}
 
 	.header {
