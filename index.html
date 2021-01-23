@@ -16,15 +16,18 @@
 		}
 		.header,
 		.header_branding,
-		.section--main .section_header{
+		.section--main .section_header,
+		.section {
 			display: flex;
 		}
 		.section--main .section_header{
 			flex-direction: column;
 			justify-content: flex-end;
+			margin-top: auto;
 		}
-		.section{
-			display: grid;
+		.section {
+			
+			flex-direction: column;
 		}
 		.header{
 			height: 40px;
@@ -104,6 +107,18 @@
 
 	<main class="main">
 		<section class="section section--main" id="main">
+			<div id="main_slider" class="slider">
+				<img src="./src/assets/images/slider/aldric-rivat-clJV9c3mGOQ-unsplash.jpg">
+				<img src="./src/assets/images/slider/daniel-von-appen-Egu_BQ0uKuw-unsplash.jpg">
+				<img src="./src/assets/images/slider/frank-an-xzArwF0lKbk-unsplash.jpg">
+				<img src="./src/assets/images/slider/jakari-ward-UPhO6UoKbTM-unsplash.jpg">
+				<img src="./src/assets/images/slider/matthias-heil-gQLJteyXghw-unsplash.jpg">
+				<img src="./src/assets/images/slider/michael-48yI_ZyzuLo-unsplash.jpg">
+				<img src="./src/assets/images/slider/nathan-fertig-U8zsjmKA840-unsplash.jpg">
+				<img src="./src/assets/images/slider/norbert-levajsics-t4YuG0PQX6A-unsplash.jpg">
+				<img src="./src/assets/images/slider/simona-sergi-KnZeLFmAf80-unsplash.jpg">
+
+			</div>
 			<div class="section_header">
 				<h2>Lorem Ipsum is simply dummy text</h2>
 				<p>Lorem Ipsum is simply dummy text.</p>
@@ -142,7 +157,30 @@
 			</article>
 
 			<aside class="section_aside">
-
+				<div class="partners">
+					<h3>Firmy współpracujące: </h3>
+					<div class="partners_partner">
+						LOGO
+					</div>
+					<div class="partners_partner">
+						LOGO
+					</div>
+					<div class="partners_partner">
+						LOGO
+					</div>
+					<div class="partners_partner">
+						LOGO
+					</div>
+					<div class="partners_partner">
+						LOGO
+					</div>
+					<div class="partners_partner">
+						LOGO
+					</div>
+					<div class="partners_partner">
+						LOGO
+					</div>
+				</div>
 			</aside>
 		</section>
 
@@ -214,7 +252,7 @@
 
 					pon. - pt. 8.00 - 16.00
 				</address>
-				<footer>
+				<footer class="footer">
 					Realizacja <a href="https://grezisek.github.io">grezisek</a><br>
 					Copyright 2021 Bestwindow
 				</footer>
@@ -235,15 +273,19 @@
 			</form>
 
 			<aside class="section_aside">
-
+				<button class="aside_expand"><svg xmlns="http://www.w3.org/2000/svg" width="23.246" height="38.23" viewBox="0 0 23.246 38.23"><path d="M30,2,10,20,30,38" transform="translate(-7.758 -0.885)" stroke-width="3"/></svg></button>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438500377!2d20.921112586296267!3d52.2330653208892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1611406160778!5m2!1spl!2spl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</aside>
+
+			<footer class="footer">
+				Realizacja <a href="https://grezisek.github.io">grezisek</a><br>
+				Copyright 2021 Bestwindow
+			</footer>
 		</section>
 	</main>
 
-	<footer class="footer">
-		<script src="./src/assets/script.js"></script>
-	</footer>
-
+	
+	<script src="./src/assets/script.js"></script>
 </body>
 
 </html>

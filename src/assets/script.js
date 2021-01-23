@@ -67,9 +67,38 @@
 		for (var i = 0; i < inputs.length; i++) 
 			inputs[i].addEventListener("change", changeEventHandler)
 
-		textarea.addEventListener("change", changeEventHandler)
+		textarea.addEventListener("change", changeEventHandler);
+
+		
 	}
 
 	formInteraction(document.querySelector("#kontakt form"));
+
+	function slider(sliderNode) {
+		if (!sliderNode.children[0]) return;
+		sliderNode.children[0].classList.add("current");
+		setInterval(function() {
+			var current = sliderNode.querySelector(".current");
+			current.classList.remove("current");
+			if (current.nextElementSibling) current.nextElementSibling.classList.add("current")
+			else sliderNode.children[0].classList.add("current");
+		}, 15000);
+	}
+
+	slider(document.querySelector("#main_slider"));
+
+	function asideInteraction(asides) {
+		function expandHandler(event) {
+			event.target.parentNode.classList.toggle("is-expanded");
+			event.target.classList.toggle("is-expanded");
+		}
+
+		for (var i = 0; i < asides.length; i++) {
+			var expandBtn = asides[i].querySelector(".aside_expand");
+			if (expandBtn) expandBtn.addEventListener("click", expandHandler);
+		}
+	}
+
+	asideInteraction(document.querySelectorAll(".section_aside")) ;
 	
 })();
