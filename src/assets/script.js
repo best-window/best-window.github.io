@@ -109,7 +109,7 @@
 	document.addEventListener("readystatechange", function(event) {
 		if (event.target.readyState === "complete") {
 			slider(document.querySelector("#main_slider"));
-			lazyLoad(document.querySelectorAll("img[data-src]"));
+			lazyLoad(document.querySelectorAll("img[data-src], iframe[data-src]"));
 		}
 	});
 	
