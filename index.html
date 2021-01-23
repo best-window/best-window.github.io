@@ -12,7 +12,16 @@
 		img{
 			max-width: 100%;
 			height: auto;
-			
+		}
+		.section_background{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: 0.15;
+			pointer-events: none;
 		}
 		.header,
 		.header_branding,
@@ -108,15 +117,15 @@
 	<main class="main">
 		<section class="section section--main" id="main">
 			<div id="main_slider" class="slider">
-				<img src="./src/assets/images/slider/aldric-rivat-clJV9c3mGOQ-unsplash.jpg">
-				<img src="./src/assets/images/slider/daniel-von-appen-Egu_BQ0uKuw-unsplash.jpg">
-				<img src="./src/assets/images/slider/frank-an-xzArwF0lKbk-unsplash.jpg">
-				<img src="./src/assets/images/slider/jakari-ward-UPhO6UoKbTM-unsplash.jpg">
-				<img src="./src/assets/images/slider/matthias-heil-gQLJteyXghw-unsplash.jpg">
-				<img src="./src/assets/images/slider/michael-48yI_ZyzuLo-unsplash.jpg">
-				<img src="./src/assets/images/slider/nathan-fertig-U8zsjmKA840-unsplash.jpg">
-				<img src="./src/assets/images/slider/norbert-levajsics-t4YuG0PQX6A-unsplash.jpg">
-				<img src="./src/assets/images/slider/simona-sergi-KnZeLFmAf80-unsplash.jpg">
+				<img src="./src/assets/images/slider/aldric-rivat-clJV9c3mGOQ-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/daniel-von-appen-Egu_BQ0uKuw-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/frank-an-xzArwF0lKbk-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/jakari-ward-UPhO6UoKbTM-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/matthias-heil-gQLJteyXghw-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/michael-48yI_ZyzuLo-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/nathan-fertig-U8zsjmKA840-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/norbert-levajsics-t4YuG0PQX6A-unsplash.jpg" loading=lazy>
+				<img data-src="./src/assets/images/slider/simona-sergi-KnZeLFmAf80-unsplash.jpg" loading=lazy>
 
 			</div>
 			<div class="section_header">
@@ -182,6 +191,7 @@
 					</div>
 				</div>
 			</aside>
+			<img class="section_background" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" loading="lazy">
 		</section>
 
 		<section class="section section--oferta" id="oferta">
@@ -231,6 +241,7 @@
 			<article class="section_content">
 
 			</article>
+			<img class="section_background" src="./src/assets/images/michael-48yI_ZyzuLo-unsplash.jpg" loading="lazy">
 		</section>
 
 		<section class="section section--kontakt" id="kontakt">
@@ -281,6 +292,7 @@
 				Realizacja <a href="https://grezisek.github.io">grezisek</a><br>
 				Copyright 2021 Bestwindow
 			</footer>
+			<img class="section_background" src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash.jpg" loading="lazy">
 		</section>
 	</main>
 

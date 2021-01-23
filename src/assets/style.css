@@ -84,19 +84,6 @@ body, html {
 	position: relative;
 }
 
-.section::before{
-	content:"";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-position: center;
-	background-size: cover;
-	opacity: 0.15;
-	pointer-events: none;
-}
-
 .section:nth-of-type(2n) {
 	color: #fff;
 	background-color: #222;
@@ -386,19 +373,6 @@ body, html {
 	width: 50%;
 	padding: 10px 0;
 }
-
-.section--o_firmie::before {
-	background-image: url("./images/matthias-heil-gQLJteyXghw-unsplash.jpg");
-}
-
-.section--realizacje::before {
-	background-image: url("./images/michael-48yI_ZyzuLo-unsplash.jpg");
-}
-
-.section--kontakt::before {
-	background-image: url("./images/frank-an-xzArwF0lKbk-unsplash.jpg");
-}
-
 
 @media all and (min-width: 992px) {
 	body, html {
