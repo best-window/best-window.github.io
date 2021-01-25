@@ -97,6 +97,7 @@
 	function slider(sliderNode) {
 		if (!sliderNode.children[0]) return;
 		sliderNode.children[0].classList.add("current");
+		if (!sliderNode.children[1]) return;
 		setInterval(function() {
 			var current = sliderNode.querySelector(".current");
 			current.classList.remove("current");
