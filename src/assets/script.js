@@ -86,13 +86,7 @@
 		}
 	}
 
-	asideInteraction(document.querySelectorAll(".section_aside"));
-
-	function lazyLoad(images) {
-		for (var i = 0; i < images.length; i++) {
-			images[i].setAttribute("src", images[i].dataset.src);
-		}
-	}
+	asideInteraction(document.querySelectorAll(".aside"));
 
 	function slider(sliderNode) {
 		if (!sliderNode.children[0]) return;
@@ -106,13 +100,118 @@
 		}, 15000);
 	}
 
+	function categoryFilter(catList, itemList, resetBtn) {
+		function showAll() {
+			for (var i = 0; i < catList.children.length; i++) {
+				catList.children[i].children[0].classList.remove("hidden");
+			}
+				
+
+			for (var i = 0; i < itemList.children.length; i++)
+				itemList.children[i].classList.remove("hidden");
+		}
+
+		function showCat(catName) {
+			showAll();
+
+			for (var i = 0; i < catList.children.length; i++)
+				if (catList.children[i].children[0].dataset.category != catName)
+					catList.children[i].children[0].classList.add("hidden");
+
+			for (var i = 0; i < itemList.children.length; i++)
+				if (itemList.children[i].dataset.category != catName)
+					itemList.children[i].classList.add("hidden");
+		}
+
+		showAll();
+
+		resetBtn.addEventListener("click", showAll);
+
+		for (var i = 0; i < catList.children.length; i++) 
+			catList.children[i].children[0].addEventListener("click", function(event) {showCat(event.target.dataset.category)});
+			
+	}
 	
+	categoryFilter(
+		document.querySelector(".categories_list"),
+		document.querySelector(".realizacje_list"),
+		document.querySelector("button[data-category='all']")
+	);
+
 	document.addEventListener("readystatechange", function(event) {
 		if (event.target.readyState === "complete") {
 			slider(document.querySelector("#main_slider"));
-			lazyLoad(document.querySelectorAll("img[data-src], iframe[data-src]"));
 		}
 	});
 	
-	
+	function handlePopup(itemList) {
+		var closeBtn = document.createElement("button");
+		closeBtn.classList.add("close");
+		closeBtn.innerHTML = "Powrót"
+
+		closeBtn.addEventListener("click", function(event) {
+			event.target.parentNode.classList.remove("open");
+		});
+
+		function show(popup) {
+			popup.classList.add("open");
+			var sourceNodes = popup.querySelectorAll("[data-src]");
+			for (var i = 0; i < sourceNodes.length; i++) {
+				sourceNodes[i].setAttribute("src", sourceNodes[i].dataset.src);
+				sourceNodes[i].removeAttribute("data-src");
+			}
+			popup.prepend(closeBtn);
+		}
+
+		for (var i = 0; i < itemList.children.length; i++) {
+			(function(i) {
+				var popup = itemList.children[i].querySelector(".popup");
+				itemList.children[i].addEventListener("click", function(event) {
+					if (event.target !== closeBtn) show(popup)
+				});
+
+				var imageNodes = itemList.children[i].querySelectorAll(".popup img");
+
+				var sliderContainer = document.createElement("div");
+				sliderContainer.classList.add("popup_slider");
+
+				var sliderNav = document.createElement("nav");
+				sliderNav.classList.add("popup_slider-nav");
+				popup.prepend(sliderContainer, sliderNav);
+
+				var popupContent = document.createElement("div");
+				popupContent.classList.add("popup_content");
+
+				var content = itemList.children[i].querySelectorAll("h4, p");
+
+				for (var j = 0; j < content.length; j++)
+					popupContent.appendChild(content[j].cloneNode(true));
+
+				popup.appendChild(popupContent);
+
+				function changeSlide(index) {
+					for (var j = 0; j < imageNodes.length; j++) {
+						imageNodes[j].classList.remove("current");
+						sliderNav.children[j].classList.remove("current");
+					}
+					imageNodes[index].classList.add("current");
+					sliderNav.children[index].classList.add("current");
+				}
+
+				for (var j = 0; j < imageNodes.length; j++) {
+					(function(j) {
+						!j&&imageNodes[j].classList.add("current");
+						sliderContainer.appendChild(imageNodes[j]);
+						sliderNav.appendChild(imageNodes[j].cloneNode(true));
+						sliderNav.children[j].addEventListener("click", function() {changeSlide(j)})
+						!j&&sliderNav.children[j].classList.add("current");
+					}).call(this, j);
+
+				}
+			}).call(this, i);
+		}
+	}
+
+	handlePopup(document.querySelector(".realizacje_list"));
+
 })();
