@@ -214,4 +214,34 @@
 
 	handlePopup(document.querySelector(".realizacje_list"));
 
+	function handleTabs(tabNodes) {
+		var tabs = document.createElement("nav");
+		tabs.classList.add("tabs");
+
+		var tab = document.createElement("button");
+
+		function handleChange(index) {
+			for(var i = 0; i < tabNodes.length; i++) {
+				tabNodes[i].classList.remove("current");
+				tabs.children[i].classList.remove("current");
+				tabNodes[index].classList.add("current");
+				tabs.children[index].classList.add("current");
+			}
+		}
+
+		for (var i = 0; i < tabNodes.length; i++) {
+			(function(i){
+				tabs.appendChild(tab.cloneNode());
+				tabs.children[i].innerHTML = tabNodes[i].querySelector("h4").innerHTML;
+				tabs.children[i].addEventListener("click", function(){handleChange(i)});
+			}).call(this, i);
+		}
+
+		tabNodes[0].parentNode.insertBefore(tabs, tabNodes[0]);
+		tabNodes[0].classList.add("current");
+		tabs.children[0].classList.add("current");
+	}
+
+	handleTabs(document.querySelectorAll(".oferta_single"));
+
 })();

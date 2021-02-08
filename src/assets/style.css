@@ -169,6 +169,32 @@ body, html {
 	margin-top: 8px;
 }
 
+.oferta_single {
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	gap: 20px;
+}
+
+.oferta_single h4,
+.oferta_single span{
+	grid-column-start: 2;
+	
+}
+.oferta_single h4 {
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.oferta_single img{
+	grid-row-end: span 2;
+	align-self: stretch;
+	object-fit: cover;
+}
+
+.oferta_single p{
+	grid-column-end: span 2;
+}
+
 .section--main{
 	min-height: 60vw;
 }
@@ -549,6 +575,33 @@ body, html {
 	grid-column-end: span 2;
 }
 
+.tabs{
+	margin-left: -20px;
+	margin-bottom: 20px;
+}
+
+.tabs button{
+	margin-inline-start: 20px;
+	border: 1px solid #9abb14;
+	background: #9abb14;
+	color: #fff;
+	padding: 8px 20px;
+	font-weight: bold;
+	transition: opacity .3s ease;
+	outline: none;
+	margin-block-start: 10px;
+}
+
+.tabs button:hover,
+.tabs button:focus,
+.tabs button.current{
+	opacity: 0.5;
+}
+
+.oferta_single:not(.current){
+	display: none;
+}
+
 @media all and (min-width: 992px) {
 	body, html {
 		font-size: 18px;
@@ -566,8 +619,17 @@ body, html {
 		z-index: 1;
 	}
 
+	.section--oferta,
 	.section--realizacje{
 		grid-template-columns: 250px 1fr;
+	}
+
+	.oferta_single {
+		grid-template-columns: 250px 1fr;
+		grid-template-rows: 40px 50px 1fr;
+	}
+
+	.section--realizacje{
 		padding-bottom: 0px;
 	}
 
@@ -714,8 +776,12 @@ body, html {
 		grid-column-gap: 50px;
 	}
 
+	.section.section--oferta,
 	.section.section--realizacje{
 		grid-template-columns: 420px 1fr;
+	}
+
+	.section.section--realizacje{
 		max-height: calc(100vh - 180px);
 	}
 

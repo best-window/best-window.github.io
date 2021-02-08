@@ -5,16 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bestwindow – Montaż okien, fasad, drzwi, ogrody zimowe</title>
-	<meta name="description" content=" Szukasz szczelnego montażu stolarki okiennej ? Tutaj znajdziesz najlepszych specjalistów. Montaż gabarytów za granicą i w Polsce. Montaż okien, drzwi fasad, ogrodów zimowych.">
+	<meta name="description"
+		content=" Szukasz szczelnego montażu stolarki okiennej ? Tutaj znajdziesz najlepszych specjalistów. Montaż gabarytów za granicą i w Polsce. Montaż okien, drzwi fasad, ogrodów zimowych.">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
 
 	<style id="critical_css">
-		img{
+		img {
 			max-width: 100%;
 			height: auto;
 		}
-		.section_background{
+
+		.section_background {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -24,29 +26,35 @@
 			opacity: 0.15;
 			pointer-events: none;
 		}
+
 		.header,
 		.header_branding,
 		.section--main .section_header,
 		.section {
 			display: flex;
 		}
-		.section--main .section_header{
+
+		.section--main .section_header {
 			flex-direction: column;
 			justify-content: flex-end;
 			margin-top: auto;
 		}
+
 		.section {
-			
+
 			flex-direction: column;
 		}
-		.header{
+
+		.header {
 			height: 40px;
 			position: relative;
 		}
-		.header_menu .menu_list{
+
+		.header_menu .menu_list {
 			transform: translate3d(100%, 0, 0);
 		}
-		.main{
+
+		.main {
 			flex-direction: column;
 			overflow-y: auto;
 			height: 100vh;
@@ -54,11 +62,15 @@
 			scroll-behavior: smooth;
 			font-weight: 300;
 		}
-		h1, h2, h3{
+
+		h1,
+		h2,
+		h3 {
 			margin-top: 0;
 			line-height: 1.2em;
 		}
-		a{
+
+		a {
 			text-decoration: none;
 			color: inherit;
 		}
@@ -71,7 +83,7 @@
 
 	<header class="header">
 		<a href="/" title="Bestwindow" class="header_branding">
-			<img src="./src/static/logo.jpg" alt="Bestwindow" class="branding_logo">
+			<img src="./src/static/logo3.jpg" alt="Bestwindow" class="branding_logo">
 		</a>
 
 		<nav class="header_menu menu">
@@ -105,13 +117,13 @@
 				<li class="contact-links">
 					Zadzwoń:
 					<a href="tel:123456789">+48 123 456 789</a>
-					
+
 					Wyślij e-mail:
 					<a href="mailto:kontakt.bestwindow@gmail.com">kontakt.bestwindow@gmail.com</a>
 				</li>
 			</ul>
 
-			
+
 		</nav>
 	</header>
 
@@ -123,8 +135,8 @@
 				<img src="./src/assets/images/slider/slide_01.jpg" loading="lazy"> -->
 			</div>
 			<div class="section_header">
-				<h2>Lorem Ipsum is simply dummy text</h2>
-				<p>Lorem Ipsum is simply dummy text.</p>
+				<h2>Best<span style="color:#9abb14">window</span></h2>
+				<p>Profesjonalny Montaż Okien i Drzwi</p>
 			</div>
 		</section>
 
@@ -132,7 +144,7 @@
 			<div class="section_header">
 				<h2>O firmie</h2>
 
-				<div class="couters">
+				<!-- <div class="couters">
 					<p class="couters_item">
 						<span class="count">123</span> Lorem Ipsum is simply dummy text.
 					</p>
@@ -144,29 +156,30 @@
 					<p class="couters_item">
 						<span class="count">678</span> Lorem Ipsum is simply dummy text of the printing.
 					</p>
-				</div>
+				</div> -->
 			</div>
 
 			<article class="section_content">
 				<h3>Bestwindow</h3>
+				<p>Jesteśmy firmą, której powstanie oparte było na rosnących wymaganiach Klientów w zakresie 
+				<strong>prawidłowego</strong> , nowoczesnego i wydajnego <strong>montażu stolarki okiennej</strong>.
+				Wykorzystujemy najbardziej ekonomiczne systemy montażu, którymi możesz cieszyć się przez długie lata. 
+				Nasze podejście do każdej z realizacji jest indywidualne. Co jest już doceniane przez wielu zadowolonych klientów.
+				<br><br>
 				<p>
-					Jesteśmy firmą, której powstanie oparte było na zrozumieniu potrzeb rynku oraz rosnących 
-					wymagań Klientów w zakresie prawidłowego montażu stolarki otworowej. 
-					Dzięki naszemu doświadczeniu realizujemy najbardziej wymagające zamówienia.
-				</p>
-				<span><strong>Czym się zajmujemy?</strong></span>
-				<p>
+					<span><strong>Czym się zajmujemy?</strong></span><br><br>
 					Doradztwem odnośnie montażu<br>
 					Dobrem systemu montażu<br><br>
 					<strong>Montażem:</strong><br>
 					-stolarki okiennej<br>
 					-stolarki drzwiowej<br>
 					-fasad aluminiowych<br>
-					-ogrodów zimowych
+					-ogrodów zimowych<br>
+					-projektów wielkogabarytowch
 				</p>
 			</article>
 
-			<aside class="section_aside">
+			<!-- <aside class="section_aside">
 				<div class="partners">
 					<h3>Firmy współpracujące: </h3>
 					<div class="partners_partner">
@@ -191,34 +204,65 @@
 						LOGO
 					</div>
 				</div>
-			</aside>
-			<img class="section_background" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" loading="lazy">
+			</aside> -->
+			<img class="section_background" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg"
+				loading="lazy">
 		</section>
 
 		<section class="section section--oferta" id="oferta">
 			<div class="section_header">
 				<h2>Oferta</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 			</div>
 
 			<article class="section_content">
-				<h3>Lorem Ipsum is simply</h3>
+				<h3>Nasze specjalizacje</h3>
 				<p>
-					Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+					Poznaj systemy, dzięki którym masz pewność najwyższej jakości oraz profesjonalizmu <strong>montażu stolarki okiennej</strong>
 				</p>
+				<div class="oferta_single">
+					<img src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
+					<h4>Mowo</h4>
+					<span>
+						Systemowe mocowanie i uszczelnianie złącza okiennego w płaszczyźnie ocieplenia budynku
+					</span>
+					<p>
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+					</p>
+				</div>
+				<div class="oferta_single">
+					<img src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
+					<h4>illbruck i3</h4>
+					<span>
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing
+					</span>
+					<p>
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+						Lorem Ipsum is <strong>simply dummy</strong> text of the printing and typesetting industry.
+						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+					</p>
+				</div>
+			
+
 			</article>
-
-			<aside class="section_aside">
-
-			</aside>
 		</section>
 
 		<section class="section section--realizacje" id="realizacje">
 			<div class="section_header">
 				<h2>Realizacje</h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				<div class="realizacje_categories">
+				<p>Poznaj projekty z których jesteśmy dumni</p>
+				<!-- <div class="realizacje_categories">
 					<h3>Kategorie</h3>
 					<button data-category="all">Wyświetl wszystkie</button>
 					<ol class="categories_list">
@@ -235,99 +279,53 @@
 							<button data-category="kategoria_4">typesetting industry</button>
 						</li>
 					</ol>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="section_content">
 				<div class="realizacje_list">
 
 					<div class="realizacje_single" data-category="kategoria_1">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
-						<h4>Tytu łTytułT ytu łTytu łTytuł TytułT ytuł TytułTytułTytułTytuł TytułTytułTytułTytułTytuł</h4>
-						<p>Skrót SkrótSkrót SkrótSkrót Skró tSkrót SkrótSkrót SkrótSkrót SkrótSkrót Skr ótSkrót SkrótSkrót SkrótSkrót SkrótSkrót SkrótSkrót SkrótSkrót SkrótSkrót SkrótSkrót SkrótSkrót Skrót</p>
-						
+						<img class="single_thumb" src="./src/assets/images/Realizacja1_1.jpg"
+							alt="" loading="lazy">
+						<h4>Instalowacije okien w dobudowanym pomieszczeniu tarasowym
+						</h4>
+						<p>Konstrukcja budynku wykonana z drewna więc okna drewniano aluminiowe Firmy Internorm idealnie współgrają z całą bryłą .
+					Zamontowane okna HF310 oraz HF 330 INTERNORM .</p>
+
 						<div class="popup">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
-							<img data-src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" alt="">
+							<img data-src="./src/assets/images/Realizacja1_1.jpg" alt="">
+							<img data-src="./src/assets/images/Realizacja1_2.jpg" alt="">
+							<img data-src="./src/assets/images/Realizacja1_3.jpg" alt="">
+							<img data-src="./src/assets/images/Realizacja1_4.jpg" alt="">
+						
 
 							<aside class="aside">
-								<button class="aside_expand"><svg xmlns="http://www.w3.org/2000/svg" width="23.246" height="38.23" viewBox="0 0 23.246 38.23"><path d="M30,2,10,20,30,38" transform="translate(-7.758 -0.885)" stroke-width="3"/></svg></button>
-								<iframe loading="lazy" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438500377!2d20.921112586296267!3d52.2330653208892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1611406160778!5m2!1spl!2spl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								<button class="aside_expand"><svg xmlns="http://www.w3.org/2000/svg" width="23.246"
+										height="38.23" viewBox="0 0 23.246 38.23">
+										<path d="M30,2,10,20,30,38" transform="translate(-7.758 -0.885)"
+											stroke-width="3" />
+									</svg></button>
+								<iframe loading="lazy"
+									data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438500377!2d20.921112586296267!3d52.2330653208892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1611406160778!5m2!1spl!2spl"
+									frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+									tabindex="0"></iframe>
 							</aside>
 						</div>
 					</div>
 
-					<div class="realizacje_single" data-category="kategoria_1">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
+					<!-- <div class="realizacje_single" data-category="kategoria_1">
+						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg"
+							alt="" loading="lazy">
 						<h4>Tytuł</h4>
 						<p>Skrót</p>
 						<div class="popup">
-							
-						</div>
-					</div>
 
-					<div class="realizacje_single" data-category="kategoria_1">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
-						<h4>Tytuł</h4>
-						<p>Skrót</p>
-						<div class="popup">
-							
 						</div>
-					</div>
+					</div> -->
 
-					<div class="realizacje_single" data-category="kategoria_2">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
-						<h4>Tytuł</h4>
-						<p>Skrót</p>
-						<div class="popup">
-							
-						</div>
-					</div>
-
-					<div class="realizacje_single" data-category="kategoria_3">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
-						<h4>Tytuł</h4>
-						<p>Skrót</p>
-						<div class="popup">
-							
-						</div>
-					</div>
+		
 					
-					<div class="realizacje_single" data-category="kategoria_1">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
-						<h4>Tytuł</h4>
-						<p>Skrót</p>
-						<div class="popup">
-							
-						</div>
-					</div>
-
-					<div class="realizacje_single" data-category="kategoria_2">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
-						<h4>Tytuł</h4>
-						<p>Skrót</p>
-						<div class="popup">
-							
-						</div>
-					</div>
-
-					<div class="realizacje_single" data-category="kategoria_3">
-						<img class="single_thumb" src="./src/assets/images/matthias-heil-gQLJteyXghw-unsplash.jpg" alt="" loading="lazy">
-						<h4>Tytuł</h4>
-						<p>Skrót</p>
-						<div class="popup">
-							
-						</div>
-					</div>
 				</div>
 			</div>
 			<img class="section_background" src="./src/assets/images/michael-48yI_ZyzuLo-unsplash.jpg" loading="lazy">
@@ -341,11 +339,11 @@
 					<strong>Bestwindow</strong><br>
 					ul. Lorem 12 / 3<br>
 					12-345 Ipsum
-					
+
 					<div class="contact-links">
 						Zadzwoń:
 						<a href="tel:123456789">+48 123 456 789</a>
-						
+
 						Wyślij e-mail:
 						<a href="mailto:kontakt.bestwindow@gmail.com">kontakt.bestwindow@gmail.com</a>
 					</div>
@@ -373,19 +371,25 @@
 			</form>
 
 			<aside class="section_aside aside">
-				<button class="aside_expand"><svg xmlns="http://www.w3.org/2000/svg" width="23.246" height="38.23" viewBox="0 0 23.246 38.23"><path d="M30,2,10,20,30,38" transform="translate(-7.758 -0.885)" stroke-width="3"/></svg></button>
-				<iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438500377!2d20.921112586296267!3d52.2330653208892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1611406160778!5m2!1spl!2spl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<button class="aside_expand"><svg xmlns="http://www.w3.org/2000/svg" width="23.246" height="38.23"
+						viewBox="0 0 23.246 38.23">
+						<path d="M30,2,10,20,30,38" transform="translate(-7.758 -0.885)" stroke-width="3" />
+					</svg></button>
+				<iframe loading="lazy"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438500377!2d20.921112586296267!3d52.2330653208892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1611406160778!5m2!1spl!2spl"
+					frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</aside>
 
 			<footer class="footer">
 				Realizacja <a href="https://grezisek.github.io">grezisek</a><br>
 				Copyright 2021 Bestwindow
 			</footer>
-			<img class="section_background" src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg" loading="lazy">
+			<img class="section_background" src="./src/assets/images/frank-an-xzArwF0lKbk-unsplash_optimized.jpg"
+				loading="lazy">
 		</section>
 	</main>
 
-	
+
 	<script src="./src/assets/script.js"></script>
 </body>
 
