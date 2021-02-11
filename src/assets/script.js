@@ -100,43 +100,7 @@
 		}, 15000);
 	}
 
-	// function categoryFilter(catList, itemList, resetBtn) {
-	// 	function showAll() {
-	// 		for (var i = 0; i < catList.children.length; i++) {
-	// 			catList.children[i].children[0].classList.remove("hidden");
-	// 		}
-				
-
-	// 		for (var i = 0; i < itemList.children.length; i++)
-	// 			itemList.children[i].classList.remove("hidden");
-	// 	}
-
-	// 	function showCat(catName) {
-	// 		showAll();
-
-	// 		for (var i = 0; i < catList.children.length; i++)
-	// 			if (catList.children[i].children[0].dataset.category != catName)
-	// 				catList.children[i].children[0].classList.add("hidden");
-
-	// 		for (var i = 0; i < itemList.children.length; i++)
-	// 			if (itemList.children[i].dataset.category != catName)
-	// 				itemList.children[i].classList.add("hidden");
-	// 	}
-
-	// 	showAll();
-
-	// 	resetBtn.addEventListener("click", showAll);
-
-	// 	for (var i = 0; i < catList.children.length; i++) 
-	// 		catList.children[i].children[0].addEventListener("click", function(event) {showCat(event.target.dataset.category)});
-			
-	// }
 	
-	// categoryFilter(
-	// 	document.querySelector(".categories_list"),
-	// 	document.querySelector(".realizacje_list"),
-	// 	document.querySelector("button[data-category='all']")
-	// );
 
 	document.addEventListener("readystatechange", function(event) {
 		if (event.target.readyState === "complete") {
