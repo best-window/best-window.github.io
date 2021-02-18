@@ -1,3 +1,8 @@
-User-Agent: *
+# Group 1
+User-agent: Googlebot
+Allow: /
+
+# Group 2
+User-agent: *
 Allow: /
 
