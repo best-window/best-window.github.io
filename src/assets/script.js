@@ -72,7 +72,7 @@
 		
 	}
 
-	formInteraction(document.querySelector("#kontakt form"));
+	//formInteraction(document.querySelector("#kontakt form"));
 
 	function asideInteraction(asides) {
 		function expandHandler(event) {
