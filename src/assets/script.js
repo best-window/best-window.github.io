@@ -25,52 +25,52 @@
 		document.querySelector(".section")
 	);
 
-	function formInteraction(contactForm) {
-		var inputs = [
-			contactForm.elements.name,
-			contactForm.elements.mail,
-			contactForm.elements.phone,
-		];
+	// function formInteraction(contactForm) {
+	// 	var inputs = [
+	// 		contactForm.elements.name,
+	// 		contactForm.elements.mail,
+	// 		contactForm.elements.phone,
+	// 	];
 
-		var textarea = contactForm.elements.message;
+	// 	var textarea = contactForm.elements.message;
 
-		function clickEventHandler(event) {
+	// 	function clickEventHandler(event) {
 
-			if (
-				contactForm.contains(document.activeElement) &&
-				( 
-					inputs.includes(document.activeElement) ||
-					textarea === document.activeElement
-				)
-			) {
-				var prevFocus = contactForm.querySelectorAll(".focused");
-				for (var i = 0; i < prevFocus.length; i++) prevFocus[i].classList.remove("focused");
+	// 		if (
+	// 			contactForm.contains(document.activeElement) &&
+	// 			( 
+	// 				inputs.includes(document.activeElement) ||
+	// 				textarea === document.activeElement
+	// 			)
+	// 		) {
+	// 			var prevFocus = contactForm.querySelectorAll(".focused");
+	// 			for (var i = 0; i < prevFocus.length; i++) prevFocus[i].classList.remove("focused");
 
-				document.activeElement.previousElementSibling.classList.add("focused");
+	// 			document.activeElement.previousElementSibling.classList.add("focused");
 
-			} else {
-				for (var i = 0; i < inputs.length; i++)
-					inputs[i].previousElementSibling.classList.remove("focused");
+	// 		} else {
+	// 			for (var i = 0; i < inputs.length; i++)
+	// 				inputs[i].previousElementSibling.classList.remove("focused");
 
-				textarea.previousElementSibling.classList.remove("focused");
-			}
+	// 			textarea.previousElementSibling.classList.remove("focused");
+	// 		}
 
-		}
+	// 	}
 
-		document.addEventListener("click", clickEventHandler);
+	// 	document.addEventListener("click", clickEventHandler);
 
-		function changeEventHandler(event) {
-			if (event.target.value.length) event.target.previousElementSibling.classList.add("filled")
-			else event.target.previousElementSibling.classList.remove("filled")
-		}
+	// 	function changeEventHandler(event) {
+	// 		if (event.target.value.length) event.target.previousElementSibling.classList.add("filled")
+	// 		else event.target.previousElementSibling.classList.remove("filled")
+	// 	}
 
-		for (var i = 0; i < inputs.length; i++) 
-			inputs[i].addEventListener("change", changeEventHandler)
+	// 	for (var i = 0; i < inputs.length; i++) 
+	// 		inputs[i].addEventListener("change", changeEventHandler)
 
-		textarea.addEventListener("change", changeEventHandler);
+	// 	textarea.addEventListener("change", changeEventHandler);
 
 		
-	}
+	// }
 
 	//formInteraction(document.querySelector("#kontakt form"));
 
