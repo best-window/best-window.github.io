@@ -666,7 +666,7 @@ body, html {
 	.section_header::after{
 		content: "";
 		width: 1px;
-		height: 115vh;
+		height: 150vh;
 		position: absolute;
 		bottom: 0;
 		right: -15px;
